@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Assistant|Josefin+Sans|Just+Me+Again+Down+Here&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Cabin|Montserrat|Roboto+Mono&display=swap" rel="stylesheet">
+        <title>my games</title>
+    </head>
+    <body>
+        <header><h2>which ships contain the bomb?</h2></header>
+        <!-- PROFILE -->
+    <div class="container1">
+        <div class="line"></div>
+        <div class="photo">
+            <img src="shib.gif" alt="cat">
+        </div>
+        <div class="nav">
+    
+            <a class="active" href="index.html">P O R T F O L I O</a><br><br><br>
+            <a href="#trialgame">G A M E S</a>
+        </div>
+
+    </div>
+    
+    
+        <div class="battleship">
+            <img class="profile" src="battleship.png" alt="1">
+            <img class="profile" src="battleship.png" alt="2">
+            <img class="profile" src="battleship.png" alt="3">
+            <img class="profile" src="battleship.png" alt="4">
+            <img class="profile" src="battleship.png" alt="5">
+
+        </div>
+    </div>
+
+        <script>
+            // // 3 chances: alert/prompt, for loop, array, if else
+
+            // var battleships = [0,0,0,1,0];
+            // var counter = 0;
+            // var tf = false;
+            // for(var i=0; i < 3; i++){
+            //     var z = prompt("enter a number");
+            //     counter++;
+            //     if(battleships[z-1] === 1){
+            //         tf === true;
+            //         break;
+            //     }
+            //     alert("try again!");
+            // }
+
+        // var battleships = [0,0,0,1,0];
+        // var counter=0;
+        // var i = 0;
+        // while(battleships[i-1]!==1){
+        //     i = prompt("enter a number");
+        //     counter++;
+            
+        // }
+        // alert("yay you found it!");
+        // alert("you tried: "+counter+"x");
+        // console.log("you tried", counter,"x");
+
+        //1. make the array
+
+        alert("PLAYING BATTLESHIP ...")
+
+        var ships = [0,0,0,1,0];
+        ships[3]=1; //reassignment
+        var randombomb = Math.floor(Math.random()*4);
+        var fact = true;
+        var counter = 0;
+        while(fact){
+            var user = prompt("enter a number from 0-4");
+            counter++;
+            if(ships[user] == 1){
+                alert("YOU WIN! YOU GUESSED "+counter+"x");
+                fact = false;
+            }
+            else{
+                alert("try again");
+            }
+        }
+
+
+            
+            
+        </script>
+    </body>
+</html>
